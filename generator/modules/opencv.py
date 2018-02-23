@@ -21,6 +21,8 @@ class Opencv(Module):
                 libprotobuf-dev \
                 libsnappy-dev \
                 protobuf-compiler \
+                libgtk2.0-dev \
+                pkg-config \
                 && \
 
             $GIT_CLONE https://github.com/opencv/opencv ~/opencv && \
