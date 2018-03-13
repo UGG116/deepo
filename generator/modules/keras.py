@@ -13,5 +13,9 @@ class Keras(Module):
             $PIP_INSTALL \
                 h5py \
                 keras \
+                pydot \
+                && \
+            DEBIAN_FRONTEND=noninteractive $APT_INSTALL \
+                graphviz \
                 && \
         '''

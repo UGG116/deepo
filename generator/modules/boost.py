@@ -20,7 +20,7 @@ class Boost(Module):
             ''' if pyver == '2.7' else (
             r'''
             wget -O ~/boost.tar.gz '''
-            + r'''https://sourceforge.net/projects/boost/files/boost/1.62.0/boost_1_62_0.tar.gz && \
+            + r'''https://sourceforge.net/projects/boost/files/boost/1.66.0/boost_1_66_0.tar.gz && \
             tar -zxf ~/boost.tar.gz -C ~ && \
             cd ~/boost_* && \
             ./bootstrap.sh --with-python=python%s && \

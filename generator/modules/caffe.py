@@ -21,6 +21,7 @@ class Caffe(Module):
             $GIT_CLONE https://github.com/BVLC/caffe ~/caffe && \
             cp ~/caffe/Makefile.config.example ~/caffe/Makefile.config && \
             sed -i 's/# %s/%s/g' ~/caffe/Makefile.config && \
+            sed -i 's@#define __CUDACC_VER__ "__CUDACC_VER__ is no longer supported. Use __CUDACC_VER_MAJOR__, __CUDACC_VER_MINOR__, and __CUDACC_VER_BUILD__ instead."@//#define __CUDACC_VER__ "__CUDACC_VER__ is no longer supported. Use __CUDACC_VER_MAJOR__, __CUDACC_VER_MINOR__, and __CUDACC_VER_BUILD__ instead."@g' /usr/local/cuda/include/common_functions.h && \
         ''' % (
             ('CPU_ONLY', 'CPU_ONLY') if self.composer.cpu_only else \
             ('USE_CUDNN', 'USE_CUDNN') \
