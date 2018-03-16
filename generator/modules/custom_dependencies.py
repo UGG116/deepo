@@ -2,9 +2,10 @@
 from .__module__ import Module, dependency, source
 from .python import Python
 from .tensorflow import Tensorflow
+from .pyopenpose import Pyopenpose
+from .openpose import Openpose
 
-
-@dependency(Python, Tensorflow)
+@dependency(Python, Tensorflow, Pyopenpose, Openpose)
 @source('apt')
 class Custom_Dependencies(Module):
 

@@ -11,7 +11,7 @@ class Tensorflow(Module):
         return r'''
             $PIP_INSTALL \
                 tensorflow%s \
-                tensorboard
+                tensorboard \
                 && \
         ''' % ('' if self.composer.cpu_only else '-gpu')
 
